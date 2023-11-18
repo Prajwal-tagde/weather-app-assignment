@@ -6,8 +6,7 @@ const GEOCODING_API_URL = import.meta.env.GEOCODING_API_URL;
 // const API_KEY = import.meta.env.VITE_API_KEY;
 const WEATHER_API_URL = import.meta.env.WEATHER_API_URL;
 
-let API_KEY = import.meta.env.VITE_API_KEY;
-
+// let API_KEY = import.meta.env.VITE_API_KEY;
 
 const SearchMain = () => {
 
@@ -38,7 +37,7 @@ const SearchMain = () => {
     try {
       // https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=5a04db1d894633b7ef4c3de187f5b852
 
-      await axios.get(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=5a04db1d894633b7ef4c3de187f5b852`)
+      await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=5a04db1d894633b7ef4c3de187f5b852`)
       .then((data) => {
         console.log(data);
         // console.log(data.data.list);
